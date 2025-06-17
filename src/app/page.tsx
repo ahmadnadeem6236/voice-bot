@@ -178,12 +178,9 @@ export default function Home() {
                 {exampleQuestions.map((question, index) => (
                   <div
                     key={index}
-                    className="glass-effect p-4 rounded-lg text-black/80 hover:text-white hover:bg-white/20 transition-all duration-300 text-left disabled:opacity-50 group"
+                    className="glass-effect p-4 rounded-lg text-black/80 "
                   >
-                    <span className="text-blue-400 group-hover:text-blue-300">
-                      💬{" "}
-                    </span>
-                    "{question}"
+                    <span className="text-blue-400">💬 </span>"{question}"
                   </div>
                 ))}
               </div>
