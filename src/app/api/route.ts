@@ -1,5 +1,4 @@
 import Groq from "groq-sdk";
-import { headers } from "next/headers";
 import { after } from "next/server";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
