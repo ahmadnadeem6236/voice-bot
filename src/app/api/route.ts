@@ -55,7 +55,10 @@ export async function POST(request: Request) {
           
           Always answer clearly, thoughtfully, and in a friendly, conversational tone.`,
       },
-      ...JSON.parse(message as string),
+      ...JSON.parse(message as string).map((msg: any) => ({
+        role: msg.role,
+        content: msg.content,
+      })),
       {
         role: "user",
         content: transcript,
